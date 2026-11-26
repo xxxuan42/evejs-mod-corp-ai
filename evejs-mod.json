@@ -8,36 +8,34 @@
   "changelog": "",
   "conflicts": [],
   "delisted": false,
-  "description": "月矿碎裂后自动生成采矿舰队（长须鲸级+霍克级）开采矿石，装满后交付精炼厂并向拥有人开出赠与合同。",
+  "description": "月矿碎裂后自动生成采矿舰队（长须鲸级+霍克级）开采矿石，装满后交付精炼厂并向拥有人开出赠与合同。仅适配 EveJS 261125.3（客户端 build 3724492），不兼容旧服务端。",
   "displayName": "军团AI",
   "downloadUrls": [
     {
       "mirror": "github",
       "priority": 1,
-      "url": "https://github.com/xxxuan42/evejs-mod-corp-ai/releases/download/v0.1.0/corp-ai-0.1.0.zip"
+      "url": "https://github.com/xxxuan42/evejs-mod-corp-ai/releases/download/v0.2.1/corp-ai-0.2.1.zip"
     }
   ],
   "evejsVersions": [
-    "261028.1",
-    "261108.1",
-    "261115.2"
+    "261125.3"
   ],
   "featured": false,
   "highlights": [],
   "history": [],
   "id": "corp-ai",
-  "publishedAt": "2026-11-21",
+  "publishedAt": "2026-11-26",
   "readme": [
     "- 五个源码补丁（注入总线 `__evejsMods.register`，MOD_AUTHORING.md 附录 G）：\n  1. `moonMiningSpaceRuntime.js`：包装 `createFieldFromExtraction` 发出碎裂事件；\n  2. `miningNpcOperations.js`：导出内部函数供模组复用；\n  3. `contractRuntimeState.js`：导出 `createContract` 供模组以指定角色签发；\n  4. `charService.js`：导出角色自动创建与按名查找（\"军团AI\"发行人角色，无需玩家建号）；\n  5. `npcData.js`：向 `npcProfiles` / `npcLoadouts` 注入 `corp_ai_rorqual`（长须鲸级 28352）与 `corp_ai_orca`（逆戟鲸级 28606），\n     含开采先锋/工业核心/月矿压缩器装配。\n- 全部参数配置化；停用模组并重启服务端即恢复原版行为。"
   ],
   "repo": "https://github.com/xxxuan42/evejs-mod-corp-ai",
   "requiresRestart": true,
-  "sha256": "11b1bdfb6fb515cdc5e2031f1e2561020bdb2269c6e97d47aa744b69be398efd",
-  "sizeBytes": 77074,
+  "sha256": "00a98ce3a3a197c80550e8adb935d4f407de4f2420c27080fdedffc86a76144f",
+  "sizeBytes": 78966,
   "tags": [
     "采矿",
     "月矿",
     "舰队"
   ],
-  "version": "0.1.0"
+  "version": "0.2.1"
 }
